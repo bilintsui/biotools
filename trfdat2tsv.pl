@@ -69,8 +69,8 @@ if( $output_version eq "" ) {
 if( $output_parameters eq "" ) {
 	print STDERR "Warning: Could not find \"Parameters\" line in your TRF .dat file.\n";
 }
-print "# Originally produced by TRF v$output_version, parameters: $output_parameters\n";
-print "# " . join( "\t", (
+print $fd_out "# Originally produced by TRF v$output_version, parameters: $output_parameters\n";
+print $fd_out "# " . join( "\t", (
 		"sequence", "start", "end", "period_size", "copy_number",
 		"consensus_size", "percent_matches", "percent_indels", "score",	"base_num_a",
 		"base_num_c", "base_num_g", "base_num_t", "entropy", "consensus_pattern", "original_region"
