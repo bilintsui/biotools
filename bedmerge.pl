@@ -83,3 +83,4 @@ foreach my $recseq( natsort( keys %{$outputs} ) ) {
 		print $fd_out "$recseq\t$recstart\t$recend\n";
 	}
 }
+close $fd_out;
