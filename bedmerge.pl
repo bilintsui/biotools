@@ -46,7 +46,7 @@ foreach my $recline( @sources ) {
 	my $cur_seqname = $cur_fields[0];
 	my $cur_start = $cur_fields[1];
 	my $cur_end = $cur_fields[2];
-	if( !$cur_start=~/^\d+$/ || !$cur_end=~/^\d+$/ ) {
+	if( $cur_start !~ /^\d+$/ || $cur_end !~ /^\d+$/ ) {
 		warn "Warning: Ignored invalid BED entry, at line $cur_line.\n";
 		$cur_line++;
 		next;
