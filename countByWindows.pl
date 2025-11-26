@@ -2,7 +2,18 @@
 use POSIX;
 my( $genomeSize, $windowSize, $noteString, $gffFile, $resultFile ) = @ARGV;
 if( $genomeSize eq '' || $windowSize eq '' ) {
-	die( "Count sequence repeat times in genome by windows.\n\nUsage: $0 <genome_size> <window_size> [note_string] [gff_file] [output_file]\n\ngenome_size\tSize of the source sequence (usually chromosome).\nwindow_size\tSize of the sequence range (window) to count repeats.\nnote_string\tOptional string, to add a note at the last column.\ngff_file\tSource GFF file. If unset or using \"-\", will read from standard input.\noutput_file\tResult file. If unset or using \"-\", will write to standard output.\n\nNote: This script doesn't support slipping windows.\n" );
+	die
+"Count sequence repeat times in genome by windows.
+
+Usage: $0 <genome_size> <window_size> [note_string] [gff_file] [output_file]
+genome_size	Size of the source sequence (usually chromosome).
+window_size	Size of the sequence range (window) to count repeats.
+note_string	Optional string, to add a note at the last column.
+gff_file	Source GFF file. If unset or using \"-\", will read from standard input.
+output_file	Result file. If unset or using \"-\", will write to standard output.
+
+Note: This script doesn't support slipping windows.
+";
 }
 my $noteHeader = '';
 if( $noteString ne '' ) {

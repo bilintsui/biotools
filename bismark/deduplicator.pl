@@ -1,7 +1,11 @@
 #! /usr/bin/perl
 use Sort::Key::Natural qw(natsort);
 if( ! @ARGV ) {
-	die( "Keep only one name within the same location in bismark results.\n\nUsage: $0 <bismark_result1> [bismark_result2] ...\n" );
+	die
+"Keep only one name within the same location in bismark results.
+
+Usage: $0 <bismark_result1> [bismark_result2] ...
+";
 }
 my $cache;
 my $header = '';

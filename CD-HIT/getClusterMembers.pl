@@ -1,7 +1,14 @@
 #! /usr/bin/perl
 my( $clstrfile, $prefix ) = @ARGV;
 if( ( $clstrfile eq '' ) || ( $prefix eq '' ) ) {
-	die( "Get members of each cluster from CD-HIT's clstr file.\n\nUsage: $0 <clstr_file> <output_prefix>\n\nclstr_file\tThe .clstr result file from CD-HIT.\noutput_prefix\tThe prefix of output files. Example: Use \"tmp/\" when output files are aimed stored under \"tmp\" directory.\n" );
+	die
+"Get members of each cluster from CD-HIT's clstr file.
+
+Usage: $0 <clstr_file> <output_prefix>
+
+clstr_file	The .clstr result file from CD-HIT.
+output_prefix	The prefix of output files. Example: Use \"tmp/\" when output files are aimed stored under \"tmp\" directory.
+";
 }
 my $init = 0;
 my $cluster = '';

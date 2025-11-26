@@ -1,7 +1,15 @@
 #! /usr/bin/perl
 my ( $srcfile, $dstfile, $percentage ) = @ARGV;
 if ( ( $srcfile eq '' ) || ( $dstfile eq '' ) ) {
-	die( "Remove gaps in aligned sequences by its appearing percentage.\n\nUsage: $0 <src_file> <dst_file> <percentage>\n\nsrc_file\tThe filename of sequences to read.\ndst_file\tThe filename of sequences to write.\npercentage\tKeep bases if appearing times over (sequence total counts) * <percentage>. Defaults to 75.\n" );
+	die
+"Remove gaps in aligned sequences by its appearing percentage.
+
+Usage: $0 <src_file> <dst_file> <percentage>
+
+src_file	The filename of sequences to read.
+dst_file	The filename of sequences to write.
+percentage	Keep bases if appearing times over (sequence total counts) * <percentage>. Defaults to 75.
+";
 }
 if ( $percentage eq '' ) {
 	$percentage = 75;
