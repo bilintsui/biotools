@@ -6,7 +6,6 @@ eval {
 	Sort::Key::Natural->import( "natsort" );
 	1;
 } or die "Error: This script requires perl module \"Sort::Key::Natural\", but not found on your machine.\n\n";
-use Data::Dumper;
 
 sub bed_read {
 	my( $sources_ref, $name ) = @_;
